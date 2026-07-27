@@ -47,12 +47,28 @@
     }
 
     .card {
+      color: inherit;
+      text-decoration: none;
       background: #1a1d27;
       border: 1px solid #2a2d3a;
       border-radius: 14px;
       padding: 2rem 2.2rem;
       flex: 1 1 260px;
       max-width: 320px;
+    }
+
+    .card-link {
+      transition: border-color 160ms ease, transform 160ms ease;
+    }
+
+    .card-link:hover {
+      border-color: #ff5914;
+      transform: translateY(-2px);
+    }
+
+    .card-link:focus-visible {
+      outline: 3px solid #ff5914;
+      outline-offset: 4px;
     }
 
     .card .icon {
@@ -102,12 +118,12 @@
   </header>
 
   <div class="apps">
-    <div class="card">
+    <a class="card card-link" href="/runcalc/" aria-label="Learn more about RunCalc">
       <div class="icon">&#127939;</div>
       <h2>RunCalc</h2>
       <p>A workout companion for tracking runs, calculating pace, and hitting your training goals.</p>
-      <span class="badge">Coming Soon</span>
-    </div>
+      <span class="badge">Explore RunCalc</span>
+    </a>
 
     <div class="card">
       <div class="icon">&#127807;</div>
